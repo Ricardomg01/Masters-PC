@@ -428,6 +428,7 @@ body {
     /* Ajusta esto según la altura deseada dentro del carrusel */
     object-fit: contain;
     /* Asegura que la imagen se ajuste de manera proporcional */
+    
 }
 
 .article-presupuesto {
