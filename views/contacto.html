@@ -10,80 +10,6 @@
     <script async
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7TrDDEgN7luyLGeY-TynTnLwCj-cnzEk&callback=initMap"
         defer></script>
-    <script>
-        let map, directionsService, directionsRenderer;
-
-        function cargarmapa() {
-            const punto = new google.maps.LatLng(40.0964469909668, -4.12019157409668);
-            // Creación del punto de coordenadas
-            const opciones = {
-                zoom: 14,
-                center: punto,
-                mapTypeId: google.maps.MapTypeId.ROADMAP
-            };
-            // Creación del mapa
-            map = new google.maps.Map(document.getElementById("mapa"), opciones);
-
-            // Inicializar el servicio de direcciones
-            directionsService = new google.maps.DirectionsService();
-            directionsRenderer = new google.maps.DirectionsRenderer();
-            directionsRenderer.setMap(map);
-
-            // Crear el marcador
-            const marker = new google.maps.Marker({
-                position: punto,
-                map: map,
-                title: "Mi marca"
-            });
-
-            // Añadir evento de clic al marcador
-            marker.addListener('click', () => {
-                if (navigator.geolocation) {
-                    navigator.geolocation.getCurrentPosition(
-                        (position) => {
-                            const userLocation = {
-                                lat: position.coords.latitude,
-                                lng: position.coords.longitude,
-                            };
-                            calculateAndDisplayRoute(userLocation, punto);
-                        },
-                        () => {
-                            handleLocationError(true, map.getCenter());
-                        }
-                    );
-                } else {
-                    handleLocationError(false, map.getCenter());
-                }
-            });
-        }
-
-        function calculateAndDisplayRoute(userLocation, businessLocation) {
-            directionsService.route(
-                {
-                    origin: userLocation,
-                    destination: businessLocation,
-                    travelMode: google.maps.TravelMode.DRIVING,
-                },
-                (response, status) => {
-                    if (status === 'OK') {
-                        directionsRenderer.setDirections(response);
-                    } else {
-                        window.alert('Directions request failed due to ' + status);
-                    }
-                }
-            );
-        }
-
-        function handleLocationError(browserHasGeolocation, pos) {
-            const infoWindow = new google.maps.InfoWindow({
-                position: pos,
-                content: browserHasGeolocation
-                    ? 'Error: El servicio de geolocalización falló.'
-                    : 'Error: Tu navegador no soporta geolocalización.',
-            });
-            infoWindow.open(map);
-        }
-    </script>
 </head>
 
 <body onload="cargarmapa()">
@@ -101,15 +27,15 @@
         <main>
         <div class="acerca">
             <div class="caja1">
-        <h1>Contacto</h1>
-        <div>
-            <p><strong>Nombre del Negocio:</strong> Masters Pc</p>
-            <p><strong>Dirección:</strong> Calle Italia 41, Camarena, España</p>
-            <p><strong>Teléfono:</strong> 636167680</p>
-            <p><strong>Email:</strong> masterspc@gmail.com</p>
+                <h1>Contacto</h1>
+                <div>
+                    <p><strong>Nombre del Negocio:</strong> Masters Pc</p>
+                    <p><strong>Dirección:</strong> Calle Italia 41, Camarena, España</p>
+                    <p><strong>Teléfono:</strong> 636167680</p>
+                    <p><strong>Email:</strong> masterspc@gmail.com</p>
+                </div>
+            </div>
         </div>
-    </div>
-    </div>
         <div id="mapa"></div>
     </main>
     </div>
@@ -125,10 +51,12 @@
 
             <div id="avisolegal">
                 <a href="../views/avisolegal.html">Aviso legal</a>
-
             </div>
         </div>
     </footer>
+
+    <!-- Referenciar el archivo JavaScript externo -->
+    <script src="../scripts/contacto.js"></script>
 </body>
 
 </html>
