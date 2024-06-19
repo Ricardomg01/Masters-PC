@@ -1,0 +1,436 @@
+/*Para dar formato en general*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+
+}
+
+/*Para dar formato a todos los articles*/
+.article {
+    position: relative;
+    padding: 2.5em;
+}
+
+/*Para dar formato a la barra de navegación*/
+header {
+    text-align: center;
+    width: 100%;
+    position: fixed;
+    background-color: white;
+    padding: 5px;
+    z-index: 1000;
+    /* Asegura que la barra de navegación esté siempre por encima del contenido */
+
+}
+
+main {
+    margin-top: 150px;
+
+}
+
+/*Para dar formato al logo de la empresa*/
+#foto {
+    padding: 0;
+    height: 100px;
+    position: relative;
+    margin: 0;
+    width: 100px;
+}
+
+/*Para dar formato a los botones de la nav*/
+.nav-enlace {
+    padding: 10px 30px;
+    color: white;
+    background-color: rgb(25, 172, 147);
+    display: inline-block;
+    text-decoration: none;
+    width: 100%;
+    text-align: center;
+    border-radius: 30px;
+}
+
+/*Para darle color al boton cuando pase el raton por encima*/
+.nav-enlace:hover {
+    background-color: rgb(0, 109, 103);
+
+}
+
+/*Para dar formato a la barra de navegación*/
+nav {
+    margin-left: 2.5em;
+    margin-right: 2.5em;
+    display: flex;
+    justify-content: space-between;
+}
+
+/*Para que se marque la pagina en la que estamos*/
+#coloractual {
+    background-color: goldenrod;
+}
+
+/*Para dar formato al footer*/
+#footer {
+    bottom: 0;
+    display: flex;
+    width: auto;
+    justify-content: space-between;
+    text-align: justify;
+}
+
+/*Para que no salgan subrayados los enlaces del footer*/
+#footer a {
+    text-decoration: none;
+}
+
+/*Para dar formato a los iconos*/
+.redes-sociales {
+    height: 100%;
+    margin-left: 2.5em;
+    text-decoration: none;
+}
+
+/*Para dar formato a la direccion de la empresa*/
+#direccion {
+    height: 100%;
+    font-weight: bold;
+    text-align: justify;
+
+}
+
+/*Para dar formato al aviso legal*/
+#avisolegal {
+    height: 100%;
+    margin-right: 2.5em;
+
+}
+
+/*Para dar formato a las redes sociales*/
+.red {
+    width: 35px;
+    height: 35px;
+}
+
+/*Para dar formato al body*/
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
+}
+
+/* Para dar formato al contenido entre el header y el footer */
+.contenedor {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    /* Asegura que el contenido principal esté en columna */
+    margin: 20px;
+    /* Margen alrededor del contenedor */
+    margin-top: 0;
+}
+
+/*Para dar formato las secciones de la pagina principal*/
+.seccion2 {
+    text-align: end;
+    padding: 100px;
+
+
+}
+
+/*Para dar formato a la foto de presentacion de la pagina principal*/
+#hardware {
+    width: 800px;
+    border-radius: 10px;
+}
+
+/*Para dar formato a las cajas de las secciones de la pagina principal*/
+#caja2 {
+    display: flex;
+    background-color: rgb(221, 221, 221);
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+
+/*Para dar formato las secciones de la pagina principal*/
+.seccion1 {
+    background-color: #fff;
+    margin: 20px 40px;
+    padding: 20px;
+    max-width: 40%;
+    min-width: 40%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Permite desplazamiento vertical si el contenido es demasiado largo */
+    max-height: 350px;
+    /* Establece la altura máxima de la caja de noticias */
+}
+
+/*Para dar formato las secciones de la pagina principal*/
+.seccion3 {
+    float: right;
+    padding-top: 10px;
+    background-color: rgb(221, 221, 221);
+    margin-top: 20px;
+    padding-top: 10px;
+    border-radius: 10px;
+    width: 1700px;
+}
+
+/*Para dar formato a las cajas de las secciones de la pagina principal*/
+.caja1 {
+    padding: 20px;
+    width: 90%;
+}
+
+/*Para dar formato a las cajas de las secciones de la pagina principal*/
+#caja3 {
+    margin: auto;
+    width: 90%;
+    padding: 40px;
+    text-align: justify;
+}
+
+/*Para dar formato a las fotos de los productos*/
+.fotosgaleria {
+    width: 300px;
+    margin: 2.5em;
+    border-radius: 10px;
+
+}
+
+/*Para dar formato a la colocación de los productos*/
+.galeria {
+    display: flex;
+    justify-content: space-around;
+    max-width: max-content;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 2.5em;
+}
+
+/*Para dar formato a los productos*/
+.producto {
+    width: 600px;
+    background-color: rgb(221, 221, 221);
+    text-align: center;
+    margin: 20px;
+    border-radius: 10px;
+    height: 550px;
+
+}
+
+/*Para dar formato a las descripciones de los productos*/
+.textito {
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: justify;
+
+}
+
+/*Para dar formato al contenedor del presupuesto*/
+.presupuesto {
+    background-color: #24303c;
+    width: 400px;
+    padding: 30px;
+    margin: auto;
+    border-radius: 10px;
+    color: white;
+
+}
+
+/*Para dar formato a los input del presupuesto*/
+.formulario {
+    width: 100%;
+    background-color: #24303c;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    color: white;
+    border: 1px solid #1f53c5;
+}
+
+/*Para dar formato al del presupuesto*/
+.h1presupuesto {
+    margin-bottom: 30px;
+
+}
+
+/*Para dar formato al boton de enviar del presupuesto*/
+.enviar {
+    margin: auto;
+    width: 100%;
+    padding: 5px;
+    border-radius: 10px;
+    border: none;
+    background-color: #1f53c5;
+    color: white;
+}
+
+/*Para darle color al boton cuando pase el raton por encima*/
+.enviar:hover {
+    background-color: #103177;
+
+}
+
+/*Para dar formato al mapa*/
+#mapa {
+    width: 1000px;
+    border-radius: 10px;
+    width: 100%;
+    height: 500px;
+}
+
+/*Para dar formato a los datos de la empresa*/
+#contacto {
+    padding: 20px;
+    width: 1000px;
+    text-align: justify;
+    background-color: rgb(221, 221, 221);
+    margin-bottom: 20px;
+    border-radius: 10px;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+/*Para dar formato a los datos de la empresa, junto a la foto*/
+#todocontacto {
+    text-align: center;
+}
+
+.contenedor-noticias {
+    background-color: #fff;
+    margin: 20px 40px;
+    padding: 20px;
+    max-width: 55%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    flex-grow: 1;
+    margin-left: 20px;
+    /* Añade un margen entre las secciones */
+    overflow-y: auto;
+    /* Permite desplazamiento vertical si el contenido es demasiado largo */
+    max-height: 350px;
+    /* Establece la altura máxima de la caja de noticias */
+    min-height: 350px;
+    /* Establece la altura máxima de la caja de noticias */
+    flex-direction: column;
+    display: flex;
+    justify-content: space-between;
+}
+
+.noticia {
+    display: none;
+}
+
+#selector_noticias {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.boton {
+    background-color: transparent;
+    color: #999;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+.boton:hover {
+    color: #777;
+}
+
+.flecha {
+    font-size: 24px;
+}
+
+#barra_puntos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.punto {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    background-color: #ccc;
+    border-radius: 50%;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.punto.activo {
+    background-color: #007bff;
+}
+
+.contenedor-secciones-inline {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+
+}
+
+.acerca {
+    background-color: #fff;
+    margin: 20px 40px 40px;
+    padding: 20px;
+    max-width: auto;
+    min-width: auto;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow-y: auto;
+    /* Permite desplazamiento vertical si el contenido es demasiado largo */
+    max-height: 350px;
+    /* Establece la altura máxima de la caja de noticias */
+}
+
+.swiper {
+    width: 100%;
+    height: 80vh;
+    margin-top: 40px;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    width: auto;
+    /* Asegura que el ancho no excede el contenedor */
+    max-height: 80%;
+    /* Ajusta esto según la altura deseada dentro del carrusel */
+    object-fit: contain;
+    /* Asegura que la imagen se ajuste de manera proporcional */
+}
+
+.article-presupuesto {
+    padding: 2.5em;
+
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masters PC</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <!--En vez de colocar un botón inicio, utilizo el logo de la tienda para volver a la página principal-->
+            <a href="../index.html"><img id="foto" alt="logo_masters_pc" src="../assets/image/Logonuevo.png" width="300" height="100"></a>
+            <nav>
+                <!--Aquí coloco los enlaces al resto de páginas-->
+                <a href="#" class="nav-enlace" id="coloractual">Galería</a>
+                <a href="../views/presupuesto.html" class="nav-enlace">Presupuesto</a>
+                <a href="../views/contacto.html" class="nav-enlace">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <!-- Swiper -->
+            <div class="swiper">
+                <div class="swiper-wrapper">
+                    <!-- Slides con dimensiones -->
+                    <div class="swiper-slide"><img src="../assets/image/accesorios.png" alt="Imagen 1" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/almacenamiento.png" alt="Imagen 2" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/graficas.png" alt="Imagen 3" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/placas.png" alt="Imagen 4" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/procesadores.png" alt="Imagen 5" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/ram.png" alt="Imagen 6" width="800" height="600"></div>
+                    <div class="swiper-slide"><img src="../assets/image/refrigeracion.png" alt="Imagen 7" width="800" height="600"></div>
+                    <!-- más imágenes si es necesario -->
+                </div>
+                <!-- Si necesitas paginación -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Si necesitas navegación -->
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-button-next"></div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/?locale=es_ES"><img src="../assets/image/facebook.png" class="red"
+                        alt="facebook" width="32" height="32"></a>
+                <a href="https://www.instagram.com/"><img src="../assets/image/instagram.png" class="red"
+                        alt="instagram" width="32" height="32"></a>
+                <a href="https://twitter.com/"><img src="../assets/image/gorjeo.png" class="red" alt="twitter" width="32" height="32"></a>
+            </div>
+            <div id="avisolegal">
+                <a href="../views/avisolegal.html">Aviso legal</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <!-- Archivo JavaScript Externo -->
+    <script src="../scripts/swiper.js"></script>
+
+</body>
+
+</html>

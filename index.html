@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, inicial-scale=1.0">
+    <title>Masters PC</title>
+    <link rel="stylesheet" href="./estilos/estilos.css">
+
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <!--En vez de colocar un botón inicio, utilizo el logo de la tienda para volver a la página principal-->
+            <a href="#"><img id="foto" alt="logo_masters_pc" src="./assets/image/Logonuevo.png" width="500" height="500"></a>
+            <nav>
+                <!--Aquí coloco los enlaces al resto de páginas-->
+                <a href="./views/productos.html" class="nav-enlace">Galería</a>
+                <a href="./views/presupuesto.html" class="nav-enlace">Presupuesto</a>
+                <a href="./views/contacto.html" class="nav-enlace">Contacto</a>
+
+            </nav>
+        </header>
+
+        <main>
+            <div class="contenedor-secciones-inline">
+                <section class="seccion1">
+                    <div class="caja1">
+                        <h2>Bienvenido a Masters PC</h2><br><br><br>
+                        <p>En Masters PC, nos enorgullece ser tu destino de confianza para todas tus necesidades de
+                            hardware de PC. Ya seas un entusiasta de los juegos, un profesional creativo o simplemente
+                            alguien que busca mejorar su estación de trabajo, estamos aquí para proporcionarte las
+                            soluciones más avanzadas y de alta calidad en el mundo del hardware de computadora.</p>
+                    </div>
+                </section>
+
+                <section class="contenedor-noticias">
+                    <h2 class="caja1">Noticias</h2><br>
+                    <div id="noticias" class="caja1"></div>
+                    <div id="selector_noticias">
+                        <div id="anterior" class="boton flecha">&#9664;</div>
+                        <div id="barra_puntos"></div>
+                        <div id="siguiente" class="boton flecha">&#9654;</div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <div class="acerca">
+                        <div class="caja1">
+                            <h2>Acerca de nosotros</h2><br>
+                            <br>
+                            <h3>Nuestra Misión</h3><br>
+                            <p>Nuestra misión es ofrecer soluciones tecnológicas innovadoras y de vanguardia que
+                                permitan a nuestros clientes alcanzar sus objetivos informáticos de manera efectiva y
+                                eficiente. Nos esforzamos por mantenernos actualizados con las últimas tendencias y
+                                avances en el mundo del hardware de computadoras para brindarte la mejor experiencia
+                                posible.</p>
+                            <br>
+                            <h3>¿Qué nos diferencia?</h3><br>
+                            <p>En Masters PC, nos destacamos por nuestro compromiso con la calidad, la atención al
+                                cliente y la excelencia en el servicio. Nuestro equipo altamente capacitado está aquí
+                                para asesorarte y ayudarte a encontrar los productos que mejor se adapten a tus
+                                necesidades específicas. Además, nos enorgullece ofrecer un ambiente acogedor y amigable
+                                donde todos los clientes se sientan bienvenidos.</p>
+                            <br>
+                            <h3>Nuestra Historia</h3><br>
+                            <p>Desde nuestra fundación en 2023, hemos crecido y evolucionado para convertirnos en uno de
+                                los principales destinos de hardware de PC en la región. Con una combinación de pasión
+                                por la tecnología y un enfoque centrado en el cliente, hemos construido una reputación
+                                sólida y duradera en la comunidad.</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <div>
+                <section>
+                    <div class="acerca">
+                        <div class="caja1">
+                            <h2>Reseñas</h2><br>
+                            <br>
+                            <h3>María Gómez</h3><br>
+                            <p>"¡Increíble servicio! Compré una tarjeta gráfica para mi PC gaming y quedé impresionada
+                                con la calidad del producto y la rapidez en la entrega. Definitivamente volveré a
+                                comprar en Masters PC."</p>
+                            <br>
+                            <h3>Juan Pérez</h3><br>
+                            <p>"Mi experiencia con Masters PC ha sido excelente. Recientemente adquirí un nuevo
+                                procesador y recibí asesoramiento personalizado por parte del equipo. Estoy muy contento
+                                con mi compra y la atención recibida."</p>
+                            <br>
+                            <h3>Laura Martínez</h3><br>
+                            <p>"¡Altamente recomendado! Compré una memoria RAM para mi computadora y no solo obtuve un
+                                excelente producto, sino también un servicio al cliente excepcional. ¡Gracias Masters PC
+                                por su profesionalismo y atención al detalle!"</p>
+                            <br>
+                            <h3>Carlos Rodríguez</h3><br>
+                            <p>"Desde que descubrí Masters PC, se ha convertido en mi tienda de referencia para todas
+                                mis necesidades de hardware. Siempre encuentro lo que busco a precios competitivos y con
+                                un servicio impecable. ¡No puedo pedir más!"</p>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </main>
+
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/?locale=es_ES"><img src="../assets/image/facebook.png" class="red"
+                        alt="facebook" width="512" height="512"></a>
+                <a href="https://www.instagram.com/"><img src="../assets/image/instagram.png" class="red"
+                        alt="instagram" width="512" height="512"></a>
+                <a href="https://twitter.com/"><img src="../assets/image/gorjeo.png" class="red" alt="twitter" width="512" height="512"></a>
+            </div>
+
+            <div id="avisolegal">
+                <a href="../views/avisolegal.html">Aviso legal</a>
+
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="./scripts/noticias.js"></script>
+</body>
+
+</html>

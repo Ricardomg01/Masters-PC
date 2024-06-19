@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Masters PC</title>
+    <link rel="stylesheet" href="../estilos/estilos.css">
+</head>
+
+<body>
+    <div class="contenedor">
+        <header>
+            <!--En vez de colocar un botón inicio, utilizo el logo de la tienda para volver a la página principal-->
+            <a href="../index.html"><img id="foto" alt="logo_masters_pc" src="../assets/image/Logonuevo.png" width="500" height="500"></a>
+            <nav>
+                <!--Aquí coloco los enlaces al resto de páginas-->
+                <a href="../views/productos.html" class="nav-enlace">Galería</a>
+                <a href="#" class="nav-enlace" id="coloractual">Presupuesto</a>
+                <a href="../views/contacto.html" class="nav-enlace">Contacto</a>
+            </nav>
+        </header>
+        <main>
+            <div class="article-presupuesto">
+                <div class="presupuesto">
+                    <h1 class="h1presupuesto">Solicitud de Presupuesto</h1>
+                    <form id="formulario-presupuesto" action="./enviar-presupuesto.php" method="post" onsubmit="return validarFormulario()">
+                        <input class="formulario" type="text" id="nombre" name="nombre" placeholder="Ingrese su nombre" required>
+                        <input class="formulario" type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required>
+                        <input class="formulario" type="tel" id="telefono" name="telefono" placeholder="Ingrese su teléfono" required>
+                        <input class="formulario" type="email" id="email" name="email" placeholder="Ingrese su correo electrónico" required>
+                        
+                        <h1 class="h1presupuesto">Presupuesto</h1>
+
+                        <!-- Producto -->
+                        <div>
+                            <label for="producto">Producto:</label>
+                            <select id="producto" onchange="actualizarPresupuesto()" class="formulario">
+                                <option value="opcion1">Tarjeta Gráfica ($100)</option>
+                                <option value="opcion2">Tarjeta Gráfica + Placa ($150)</option>
+                                <option value="opcion3">Tarjeta Gráfica + Placa + Accesorios  ($200)</option>
+                            </select>
+                        </div>
+                                        
+                        <!-- Plazo -->
+                        <div>
+                            <label for="plazo">Plazo (meses):</label>
+                            <input type="number" id="plazo" min="1" value="1" oninput="actualizarPresupuesto()" class="formulario">
+                        </div>
+
+                        <!-- Extras -->
+                        <div>
+                            <p>Extras:</p>
+                            <input type="checkbox" id="extra1" value="extra1" onchange="actualizarPresupuesto()">
+                            <label for="extra1">Caja de envio personalizada (+$50)</label><br>
+                            <input type="checkbox" id="extra2" value="extra2" onchange="actualizarPresupuesto()">
+                            <label for="extra2">Caja + dedicatoria (+$75)</label><br>
+                            <input type="checkbox" id="extra3" value="extra3" onchange="actualizarPresupuesto()">
+                            <label for="extra3">Envío premium mas todos los extras (+$100)</label><br>
+                        </div>
+                        <br>
+                        <!-- Presupuesto -->
+                        <div>
+                            <h2>Presupuesto:</h2>
+                            <p id="presupuesto">--</p>
+                        </div>
+                        <br>
+                        <label class="checkbox">
+                            <input type="checkbox" id="checkboxPrivacidad" required>
+                            Acepto la <a href="../views/politica-privacidad.html">Política de Privacidad</a>
+                        </label>
+                        <br><br>
+                        <button type="submit" class="enviar">Enviar</button>
+                    </form>
+                </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div id="footer">
+            <div class="redes-sociales">
+                <a href="https://www.facebook.com/?locale=es_ES"><img src="../assets/image/facebook.png" class="red"
+                        alt="facebook" width="512" height="512"></a>
+                <a href="https://www.instagram.com/"><img src="../assets/image/instagram.png" class="red"
+                        alt="instagram" width="512" height="512"></a>
+                <a href="https://twitter.com/"><img src="../assets/image/gorjeo.png" class="red" alt="twitter" width="512" height="512"></a>
+            </div>
+
+            <div id="avisolegal">
+                <a href="../views/avisolegal.html">Aviso legal</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Referenciar el archivo JavaScript externo -->
+    <script src="../scripts/presupuesto.js"></script>
+</body>
+</html>
